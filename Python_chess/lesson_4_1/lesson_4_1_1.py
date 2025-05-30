@@ -28,7 +28,7 @@ class ChessGame(QMainWindow):
         # Таймер для анимации
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.update_animation)
-        self.timer.start(10000)  # Интервал 10 секунд
+        self.timer.start(2000)  # Интервал 10 секунд
         self.step = 0
 
     def load_svg(self, svg_data):
@@ -36,7 +36,7 @@ class ChessGame(QMainWindow):
         self.current_svg = svg_data
         self.update()  # Запускается событие перерисовки окна
 
-    def update_animation(self):        
+    def update_animation(self):
         """Обновляет состояние объектов"""
         svg = ""  # Инициализируем переменную вне блока условий
         # Используем стандартные методы отображения шахматной доски
